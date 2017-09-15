@@ -1,0 +1,405 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Download &mdash; SQLAlchemy Migrate 0.7.3.dev documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/issuetracker.css" type="text/css" />
+  
+    <link rel="top" title="SQLAlchemy Migrate 0.7.3.dev documentation" href="index.html"/>
+        <link rel="next" title="Credits" href="credits.html"/>
+        <link rel="prev" title="migrate - SQLAlchemy Migrate (schema change management)" href="index.html"/>
+ 
+<!-- RTD Extra Head -->
+
+
+
+<!-- 
+Read the Docs is acting as the canonical URL for your project. 
+If you want to change it, more info is available in our docs:
+  http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="http://sqlalchemy-migrate.readthedocs.org/en/latest/download.html" />
+
+<script type="text/javascript">
+  // This is included here because other places don't have access to the pagename variable.
+  var READTHEDOCS_DATA = {
+    project: "sqlalchemy-migrate",
+    version: "latest",
+    language: "en",
+    page: "download",
+    theme: "sphinx_rtd_theme",
+    docroot: "/doc/source/",
+    source_suffix: ".rst",
+    api_host: "https://readthedocs.org"
+  }
+  // Old variables
+  var doc_version = "latest";
+  var doc_slug = "sqlalchemy-migrate";
+  var page_name = "download";
+  var html_theme = "sphinx_rtd_theme";
+</script>
+<!-- RTD Analytics Code -->
+<!-- Included in the header because you don't have a footer block. -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17997319-1']);
+  _gaq.push(['_trackPageview']);
+
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- end RTD Analytics Code -->
+<!-- end RTD <extrahead> -->
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> SQLAlchemy Migrate</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#development">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Database schema versioning workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="versioning.html#project-setup">Project setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioning.html#making-schema-changes">Making schema changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioning.html#writing-change-scripts">Writing change scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioning.html#command-line-usage">Command line usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioning.html#python-api">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioning.html#experimental-commands">Experimental commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioning.html#id3">Repository configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioning.html#customize-templates">Customize templates</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changeset.html">Database schema migrations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changeset.html#column">Column</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changeset.html#table">Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changeset.html#index">Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changeset.html#constraint">Constraint</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Repository migration (0.4.5 -&gt; 0.5.4)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#q-adding-a-nullable-false-column">Q: Adding a <strong>nullable=False</strong> column</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Module <tt class="docutils literal"><span class="pre">migrate.changeset</span></tt> &#8211; Schema changes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-migrate.changeset">Module <tt class="docutils literal"><span class="pre">migrate.changeset</span></tt> &#8211; Schema migration API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-migrate.changeset.ansisql">Module <tt class="docutils literal"><span class="pre">ansisql</span></tt> &#8211; Standard SQL implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-migrate.changeset.constraint">Module <tt class="docutils literal"><span class="pre">constraint</span></tt> &#8211; Constraint schema migration API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-databases-database-specific-schema-migration">Module <tt class="docutils literal"><span class="pre">databases</span></tt> &#8211; Database specific schema migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-migrate.changeset.schema">Module <tt class="docutils literal"><span class="pre">schema</span></tt> &#8211; Additional API to SQLAlchemy for migrations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html#module-migrate.versioning">Module <tt class="docutils literal"><span class="pre">migrate.versioning</span></tt> &#8211; Database versioning and repository management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-migrate.versioning.api">Module <tt class="docutils literal"><span class="pre">api</span></tt> &#8211; Python API commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-migrate.versioning.genmodel">Module <tt class="docutils literal"><span class="pre">genmodel</span></tt> &#8211; ORM Model generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-migrate.versioning.pathed">Module <tt class="docutils literal"><span class="pre">pathed</span></tt> &#8211; Path utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-migrate.versioning.repository">Module <tt class="docutils literal"><span class="pre">repository</span></tt> &#8211; Repository management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-migrate.versioning.schema">Module <tt class="docutils literal"><span class="pre">schema</span></tt> &#8211; Migration upgrade/downgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-migrate.versioning.schemadiff">Module <tt class="docutils literal"><span class="pre">schemadiff</span></tt> &#8211; ORM Model differencing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-migrate.versioning.script.base">Module <tt class="docutils literal"><span class="pre">script</span></tt> &#8211; Script actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-migrate.versioning.shell">Module <tt class="docutils literal"><span class="pre">shell</span></tt> &#8211; CLI interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-migrate.versioning.util">Module <tt class="docutils literal"><span class="pre">util</span></tt> &#8211; Various utility functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-migrate.versioning.version">Module <tt class="docutils literal"><span class="pre">version</span></tt> &#8211; Versioning management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html#module-migrate.exceptions">Module <tt class="docutils literal"><span class="pre">exceptions</span></tt> &#8211; Exception definitions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">0.7.3 (201x-xx-xx)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#changes">Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#fixed-bugs">Fixed Bugs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id1">0.7.2 (2011-11-01)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id2">Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id3">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id4">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id5">Fixed Bugs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id6">0.7.1 (2011-05-27)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id7">Fixed Bugs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id8">0.7 (2011-05-27)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id9">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id10">Fixed bugs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id11">0.6.1 (2011-02-11)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id12">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id13">Fixed bugs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id14">0.6 (11.07.2010)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id15">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id16">Fixed bugs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id17">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id18">0.5.4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id19">0.5.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id20">0.5.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id21">0.5.1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id22">0.5.1.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id23">0.5.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id24">0.4.5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id25">0.4.4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id26">0.4.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id27">0.4.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id28">0.4.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id29">0.4.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id30">0.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id31">0.2.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id32">0.2.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id33">0.2.1</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">SQLAlchemy Migrate</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Download</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="https://github.com/stackforge/sqlalchemy-migrate/blob/master/doc/source/download.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="download">
+<h1>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h1>
+<p>You can get the latest version of SQLAlchemy Migrate from the
+<a class="reference external" href="http://code.google.com/p/sqlalchemy-migrate/downloads/list">project&#8217;s download page</a>, the <a class="reference external" href="http://pypi.python.org/pypi/sqlalchemy-migrate">cheese shop</a>, <a class="reference external" href="http://pip.openplans.org/">pip</a> or via <a class="reference external" href="http://peak.telecommunity.com/DevCenter/EasyInstall#installing-easy-install">easy_install</a>:</p>
+<div class="highlight-python"><pre>$ easy_install sqlalchemy-migrate</pre>
+</div>
+<p>or:</p>
+<div class="highlight-python"><pre>$ pip install sqlalchemy-migrate</pre>
+</div>
+<p>You should now be able to use the <strong class="command">migrate</strong> command from the command
+line:</p>
+<div class="highlight-python"><pre>$ migrate</pre>
+</div>
+<p>This should list all available commands. To get more information regarding a
+command use:</p>
+<div class="highlight-python"><pre>$ migrate help COMMAND</pre>
+</div>
+<p>If you&#8217;d like to be notified when new versions of SQLAlchemy Migrate
+are released, subscribe to <a class="reference external" href="http://groups.google.com/group/migrate-announce">migrate-announce</a>.</p>
+</div>
+<div class="section" id="development">
+<span id="id1"></span><h1>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h1>
+<p>Migrate&#8217;s <a class="reference external" href="http://www.mercurial-scm.org/">Mercurial</a> repository is located at <a class="reference external" href="http://sqlalchemy-migrate.googlecode.com/hg/">Google Code</a>.</p>
+<p>To get the latest trunk:</p>
+<div class="highlight-python"><pre>$ hg clone http://sqlalchemy-migrate.googlecode.com/hg/</pre>
+</div>
+<p>Patches should be submitted to the <a class="reference external" href="http://code.google.com/p/sqlalchemy-migrate/issues/list">issue tracker</a>. You are free to create
+your own clone to provide your patches. We are open to pull requests in our
+<a class="reference external" href="http://code.google.com/p/sqlalchemy-migrate/issues/list">issue tracker</a>.</p>
+<p>If you want to work on sqlalchemy-migrate you might want to use a <cite>virtualenv</cite>.</p>
+<p>To run the included test suite you have to copy <tt class="file docutils literal"><span class="pre">test_db.cfg.tmpl</span></tt> to
+<tt class="file docutils literal"><span class="pre">test_db.cfg</span></tt> and put SQLAlchemy database URLs valid for your environment
+into that file. We use <a class="reference external" href="http://readthedocs.org/docs/nose/">nose</a> for our tests and include a test requirements
+file for pip. You might use the following commands to install the test
+requirements and run the tests:</p>
+<div class="highlight-python"><pre>$ pip install -r test-req.pip
+$ python setup.py develop
+$ python setup.py nosetests</pre>
+</div>
+<p>If you are curious about status changes of sqlalchemy-migrate&#8217;s issues you
+might want to subscribe to <a class="reference external" href="http://groups.google.com/group/sqlalchemy-migrate-issues">sqlalchemy-migrate-issues</a>.</p>
+<p>We use a <a class="reference external" href="http://jenkins.gnuviech-server.de/job/sqlalchemy-migrate-all/">Jenkins CI</a> continuous integration tool installation to
+help us run tests on most of the databases that migrate supports.</p>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="credits.html" class="btn btn-neutral float-right" title="Credits">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="migrate - SQLAlchemy Migrate (schema change management)"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011, Evan Rosson, Jan Dittberner, Domen Kožar, Chris Withers.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/en/latest/">latest</a></dd>
+        
+          <dd><a href="/en/v0.7.2/">v0.7.2</a></dd>
+        
+          <dd><a href="/en/v0.7.1/">v0.7.1</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="https://media.readthedocs.org/pdf/sqlalchemy-migrate/latest/sqlalchemy-migrate.pdf">PDF</a></dd>
+        
+          <dd><a href="https://media.readthedocs.org/htmlzip/sqlalchemy-migrate/latest/sqlalchemy-migrate.zip">HTML</a></dd>
+        
+          <dd><a href="https://media.readthedocs.org/epub/sqlalchemy-migrate/latest/sqlalchemy-migrate.epub">Epub</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Read the Docs</dt>
+          <dd>
+            <a href="//readthedocs.org/projects/sqlalchemy-migrate/?fromdocs=sqlalchemy-migrate">Project Home</a>
+          </dd>
+          <dd>
+            <a href="//readthedocs.org/builds/sqlalchemy-migrate/?fromdocs=sqlalchemy-migrate">Builds</a>
+          </dd>
+      </dl>
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+
+    </div>
+  </div>
+
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'',
+            VERSION:'0.7.3.dev',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/jquery/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/jquery/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/underscore.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/doctools.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/readthedocs-doc-embed.js"></script>
+
+  
+
+  
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
